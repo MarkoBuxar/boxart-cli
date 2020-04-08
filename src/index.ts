@@ -69,7 +69,7 @@ const main = async () => {
           const url = await gameSearch.api.GetCoverURL(+game[0].cover, size);
           await new FileDownload(
             url,
-            program.destination || __dirname,
+            program.destination || '.',
             game[0].name,
           ).Download();
         } catch (exp) {
