@@ -1,0 +1,8 @@
+{
+  "IGDB": {
+    "key": ""
+  },
+  "log": {
+    "level": ["ERR", "WARN", "INFO", "SUCC"]
+  }
+}
