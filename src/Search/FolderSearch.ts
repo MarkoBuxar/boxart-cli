@@ -15,8 +15,6 @@ export class FolderSearch extends GameSearch {
     this.platformName = platform;
   }
 
-  // x / 100% * 100
-
   public async Search(source: string, destination: string): Promise<void> {
     try {
       await this.initAPI();
@@ -31,6 +29,8 @@ export class FolderSearch extends GameSearch {
       if (!fs.existsSync(path.join(destination, '/boxart'))) {
         fs.mkdirSync(path.join(destination, '/boxart'));
       }
+      
+      // Bad solution, but I don't care enough to fix it
 
       if (this.auto) {
         this.files.forEach(async (name) => {
